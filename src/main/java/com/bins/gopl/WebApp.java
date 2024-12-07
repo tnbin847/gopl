@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class GoplApplication {
+public class WebApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(GoplApplication.class, args);
+		SpringApplication.run(WebApp.class, args);
 	}
 
 }
