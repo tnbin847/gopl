@@ -49,6 +49,8 @@ mybatis:
     jdbc-type-for-null: NULL
   # 매핑을 위한 클래스의 이름을 작성시, 해당 클래스가 속한 패키지 명 생략
   type-aliases-package: com.bins.gopl.domain.**.dto
+  # 마이바티스의 사용자 정의 타입 핸들러가 위치한 패키지를 지정하여, 값의 변환 수행시 해당 타입 핸들러가 적용되도록 설정
+  type-handlers-package: com.bins.gopl.global.common.mybatis
   # 매퍼 XML 파일의 경로 설정
   mapper-locations:
     - classpath:mappers/**/*_mapper.xml
