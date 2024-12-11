@@ -3,7 +3,7 @@ package com.bins.gopl.global.common.response.aop;
 import com.bins.gopl.global.common.response.ApiEnum;
 import com.bins.gopl.global.common.response.ApiResponse;
 import com.bins.gopl.global.common.response.BaseResponse;
-import com.bins.gopl.global.error.GlobalExceptionAdvice;
+import com.bins.gopl.global.error.GlobalExceptionAdvisor;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -28,8 +28,8 @@ import java.util.List;
  * @version 1.0.0
  */
 
-@RestControllerAdvice(basePackages = "com.bins.gopl.domain.**.controller", basePackageClasses = GlobalExceptionAdvice.class)
-public class ApiResponseBodyAdvice implements ResponseBodyAdvice<Object> {
+@RestControllerAdvice(basePackages = "com.bins.gopl.domain.**.controller", basePackageClasses = GlobalExceptionAdvisor.class)
+public class ApiResponseBodyAdvisor implements ResponseBodyAdvice<Object> {
 
     /**
      * 컨트롤러에서 작업이 끝난 후, 응답 본문을 수정하기 위한 조건에 따라 {@code beforeBodyWrite()}로 응답을 보낼지 판단한다.

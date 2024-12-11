@@ -166,7 +166,7 @@ public class ErrorResponse extends BaseResponse {
          * @param object    에러가 발생된 필드에 저장된 값
          * @return          문자열로 변환된 값 또는 빈 문자열
          */
-        private static String nullSafeToString(final Object object) {
+        public static String nullSafeToString(final Object object) {
             return object == null ? "" : object.toString();
         }
 

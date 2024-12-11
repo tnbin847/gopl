@@ -30,12 +30,12 @@ public class CodeEnumTypeHandler<E extends Enum<E> & CodeEnum> extends BaseTypeH
      */
     private final E[] constants;
 
-    public CodeEnumTypeHandler(Class<E> type, E[] constants) {
+    public CodeEnumTypeHandler(Class<E> type) {
         if (type == null) {
             throw new IllegalArgumentException("Type argument cannot be null.");
         }
         this.type = type;
-        this.constants = constants;
+        this.constants = type.getEnumConstants();
         if (!type.isInterface() && this.constants == null) {
             throw new IllegalArgumentException("'" + type.getSimpleName() + "' does not represent an enum type.");
         }
