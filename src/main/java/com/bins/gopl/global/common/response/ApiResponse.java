@@ -25,12 +25,12 @@ public class ApiResponse<T> extends BaseResponse {
     /**
      * 성공 응답을 반환한다.
      *
-     * @param apiStatus 응답의 상태 코드와 메시지 등의 정보를 정의한 {@link Enum} 클래스
+     * @param apiEnum 응답의 상태 코드와 메시지 등의 정보를 정의한 {@link Enum} 클래스
      * @param data      응답 결과 데이터
      * @return          성공 응답 객체
      * @param <T>       응답 결과 데이터의 타입
      */
-    public static<T> ApiResponse<T> success(final ApiStatus apiStatus, final T data) {
-        return new ApiResponse<>(apiStatus.getCode(), apiStatus.getMessage(), data);
+    public static<T> ApiResponse<T> success(final ApiEnum apiEnum, final T data) {
+        return new ApiResponse<>(apiEnum.getCode(), apiEnum.getMessage(), data);
     }
 }

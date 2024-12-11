@@ -13,7 +13,7 @@ import org.springframework.http.HttpStatus;
 
 @Getter
 @RequiredArgsConstructor
-public enum ApiStatus {
+public enum ApiEnum {
     /**
      * <p>성공 응답 코드</p>
      * <p>{@code code} 구성</p>
@@ -61,4 +61,19 @@ public enum ApiStatus {
      * 내부 개발자 또는 운영자를 위한 응답 메시지
      */
     private final String message;
+
+    /**
+     * 인자로 전달받은 HTTP 상태코드에 해당되는 {@link ApiEnum}을 반환한다.
+     *
+     * @param httpStatus        비교할 HTTP 상태코드
+     * @return {@link ApiEnum}  인자로 전달된 HTTP 상태코드와 일치하는 {@code httpStatus}를 가지는 {@link ApiEnum} 인스턴스
+     */
+    public static ApiEnum from(HttpStatus httpStatus) {
+        for (ApiEnum apiEnum : ApiEnum.values()) {
+            if (apiEnum.getHttpStatus().equals(httpStatus)) {
+                return apiEnum;
+            }
+        }
+        throw new IllegalArgumentException("No matching ApiEnum found for '" + httpStatus + "'.");
+    }
 }
