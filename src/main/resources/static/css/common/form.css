@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+/**
+ * 폼 레이아웃 및 폼 내부 요소 스타일
+ */
+
+
+
+/*
+    폼 내부 레이아웃
+*/
+
+/* 공통 */
+.content-form {
+    line-height: 1;
+}
+
+
+/* 폼 필드 레이아웃 */
+.field {
+    margin-bottom: var(--spacing-sm);
+}
+
+.field:last-child {
+    margin-bottom: 0;
+}
+
+
+/* 폼 필드 내부 요소 레이아웃 : 하나의 필드 레이아웃에 여러 개의 요소 정렬 */
+.field > .has-addons {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+
+/* 폼 필드 그룹 레이아웃 */
+.field.is-grouped {
+    margin: var(--spacing-lg) 0;
+}
+
+.field.is-grouped:first-child {
+    margin-top: 0;
+}
+
+.field.is-grouped:last-child {
+    margin-bottom: 0;
+}
+
+
+
+/*
+    폼 내부 요소
+*/
+
+/* 폼 라벨 */
+.label {
+    display: inline-block;
+    box-sizing: border-box;
+    margin-bottom: var(--spacing-xxs);
+    color: var(--secondary-color);
+    font-family: 'Pretendard-Medium', sans-serif;
+}
+
+
+/* 폼 입력 필드 */
+.input-wrap {
+    width: 100%;
+    border: 1px solid var(--border-color);
+    background-color: var(--white);
+}
+
+.input-wrap > .input {
+    width: 94%;
+    height: var(--contains-intrinsic-height);
+    color: var(--dark-color);
+}

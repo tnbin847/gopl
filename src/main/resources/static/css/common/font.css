@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+
+
+@font-face {
+    font-family: 'FugazOne';
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/FugazOne.woff2') format('woff2'),
+         url('/fonts/FugazOne.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Lobster';
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/Lobster.woff2') format('woff2'),
+         url('/fonts/Lobster.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Montserrat-Black';
+    font-weight: 900;
+    font-display: swap;
+    src: url('/fonts/Montserrat-Black.woff2') format('woff2'),
+         url('/fonts/Montserrat-Black.woff') format('woff');
+}
+
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/Pretendard-Regular.woff2') format('woff2'),
+         url('/fonts/Pretendard-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard-Medium';
+    font-weight: 500;
+    font-display: swap;
+    src: url('/fonts/Pretendard-Medium.woff2') format('woff2'),
+         url('/fonts/Pretendard-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'GmarketSans-Medium';
+    font-weight: 500;
+    font-display: swap;
+    src: url('/fonts/GmarketSans-Medium.woff2') format('woff2'),
+         url('/fonts/GmarketSans-Medium.woff') format('woff');
+}

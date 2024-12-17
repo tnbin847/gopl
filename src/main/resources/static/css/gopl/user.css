@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+/**
+ * 사용자 계정 관련 페이지 스타일
+ */
+
+
+
+body {
+    background-color: var(--light-color);
+}
+
+
+
+/* 로그인 컨텐츠 영역 */
+.contents:has(#login_form) {
+    width: 350px;
+}
+
+
+/* 회원가입 컨텐츠 영역 */
+.contents:has(#add_form) {
+    width: 460px;
+}
+
+.content-heading {
+    padding: 0 var(--spacing-xxxl);
+}
+
+
+
+.has-addons > .input-wrap {
+    margin-right: var(--spacing-xxs);
+}
+
+.has-addons > .btn {
+    width: 104px;
+}
+
+
+

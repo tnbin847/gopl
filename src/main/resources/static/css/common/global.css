@@ -1,0 +1,160 @@
+@charset "utf-8";
+
+/**
+ * 타이포그래피, 플렉스, 박스 등 전역적으로 사용되는 스타일
+ */
+
+
+
+/*
+    타이포그래피
+*/
+
+/* 공통 */
+* {
+    color: var(--dark-color);
+    font-family: 'Pretendard-Regular', sans-serif;
+    font-weight: 600;
+    font-size: var(--text-base-size);
+    --webkit-font-smoothing: antialiased;
+    --moz-osx-font-smoothing: grayscale;
+}
+
+
+/* 색상 */
+.is-text-primary {
+    color: var(--primary-color);
+}
+
+.is-text-secondary {
+    color: var(--secondary-color);
+}
+
+.is-text-link {
+    color: var(--link-color);
+}
+
+
+/* 정렬 */
+.is-text-left {
+    text-align: left;
+}
+
+.is-text-centered {
+    text-align: center;
+}
+
+.is-text-right {
+    text-align: right;
+}
+
+
+.required {
+    color: var(--danger-color);
+    font-size: var(--text-sm);
+}
+
+
+/* 도움글 */
+.helper {
+    margin-bottom: var(--spacing-xxs);
+    color: var(--gray);
+    font-size: var(--text-sm);
+}
+
+
+/* 링크 */
+.link {
+    color: var(--gray);
+    font-family: 'Pretendard-Medium', sans-serif;
+}
+
+/* 링크 그룹 */
+.link.is-grouped > a[role='link'] {
+    margin: 0 var(--spacing-sm);
+}
+
+.link.is-grouped > a[role='link']:first-child {
+    margin-left: 0;
+}
+
+.link.is-grouped > a[role='link']:last-child {
+    margin-right: 0;
+}
+
+
+
+/*
+    박스
+*/
+.box {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.box-padding-rounded {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    padding: var(--spacing-xs);
+    border-radius: var(--rounded-corner);
+}
+
+
+
+/*
+    플렉스 정렬
+*/
+
+/* 수직 정렬 */
+.column {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.column.is-top {
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.column.is-centered {
+    align-items: center;
+}
+
+.column.is-bottom {
+    align-items: flex-end;
+    justify-content: center;
+}
+
+
+.is-midst {
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* 수평 정렬 */
+.row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.row.is-right {
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.row.is-centered {
+    justify-content: center;
+}
+
+.row.is-left {
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.row.is-space-between {
+    justify-content: space-between;
+    align-items: center;
+}
