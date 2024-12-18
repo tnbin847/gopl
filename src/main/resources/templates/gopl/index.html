@@ -1,51 +1,11 @@
 <!DOCTYPE html>
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
-<head th:replace= "~{common/layout/fragments/head :: head}"></head>
-<link rel="stylesheet" href="/css/gopl/user.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
 <body>
-    <div id="page_container" class="column">
-        <div id="container" class="column is-midst">
-            <main class="contents">
-                <div class="content-heading is-text-centered">Going Project</div>
-                <div class="panel">
-                    <div class="panel-heading">
-                        <h1 class="panel-heading-title title-lang-ko">로그인</h1>
-                    </div>
-                    <div class="panel-body">
-                        <form role="form" id="login_form" class="content-form">
-                            <div class="field is-grouped">
-                                <div class="field">
-                                    <label for="login_id" class="label">아이디</label>
-                                    <span class="box-padding-rounded input-wrap">
-                                        <input type="text" name="id" id="login_id" class="box input" autofocus>
-                                    </span>
-                                </div>
-                                <div class="field">
-                                    <label for="login_pwd" class="label">비밀번호</label>
-                                    <span class="box-padding-rounded input-wrap">
-                                        <input type="password" name="password" id="login_pwd" class="box input" autocomplete="off">
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="field is-grouped">
-                                <div class="field">
-                                    <span class="box-padding-rounded btn btn-primary">
-                                        <button type="button" id="btn_login" class="box button">로그인</button>
-                                    </span>
-                                </div>
-                                <div class="field link is-grouped is-text-centered">
-                                    <a href="#" role="link" class="is-text-secondary">아이디 찾기</a>|
-                                    <a href="#" role="link" class="is-text-secondary">비밀번호 찾기</a>|
-                                    <a href="/sign-up" role="link" class="is-text-secondary">회원가입</a>
-                                </div>
-                                <small class="form-message"></small>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </main>
-        </div>
-    </div>
-    <th:block th:replace= "~{common/layout/fragments/script :: script}"/>
+
 </body>
 </html>

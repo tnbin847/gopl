@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+/**
+ * HTML 속성 초기화
+ */
+
 
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -16,24 +20,45 @@ time, mark, audio, video {
     vertical-align: baseline;
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
 
-ol, ul { list-style: none; }
+ol, ul {
+    list-style: none;
+}
 
-blockquote, q { quotes: none; }
+blockquote, q {
+    quotes: none;
+}
 
-blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
 
-p, div, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, 
-input, textarea, select, button, code, label, em, span, strong { word-break: keep-all; }
+p, div, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend,
+input, textarea, select, button, code, label, em, span, strong {
+    word-break: keep-all;
+}
 
-a { cursor: pointer; text-decoration: none; }
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
 
-a[role='link']:hover { text-decoration: underline; }
+a[role='link']:hover {
+    text-decoration: underline;
+}
 
-table { border-collapse: collapse; border-spacing: 0; }
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
 
-img, fieldset { border: 0; }
+img, fieldset {
+    border: 0;
+}
 
 legend {
     position: absolute;
@@ -59,6 +84,11 @@ input {
     -moz-appearance: none;
 }
 
-select { appearance: none; -o-appearance: none; }
+select {
+    appearance: none;
+    -o-appearance: none;
+}
 
-select::-ms-expand { display: none; }
+select::-ms-expand {
+    display: none;
+}
