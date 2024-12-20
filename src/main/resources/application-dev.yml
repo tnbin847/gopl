@@ -1,0 +1,64 @@
+#
+# 스프링부트 애플리케이션 로컬 개발 환경 설정
+#
+
+# 스프링 설정
+spring:
+  config:
+    activate:
+      on-profile:
+        - dev
+  # 로컬 데이터베이스 연결 정보 설정
+  datasource:
+    url: jdbc:mariadb://localhost:3306/gopl_db?characterEncoding=UTF-8&serverTimezone=Asia/Seoul
+    username: suihin
+    password: tq5033
+    driver-class-name: org.mariadb.jdbc.Driver
+    # 히카리 CP 설정
+    hikari:
+      connection-test-query: SELECT 1
+      maximum-pool-size: 30
+      minimum-idle: 2
+      connection-timeout: 5000
+      validation-timeout: 1000
+
+# 마이바티스 설정
+mybatis:
+  # 서버 구동시 마이바티스의 동작 제어를 위한 설정 값 세팅
+  configuration:
+    # 매퍼 네임스페이스 단위로 동작되는 캐시 비활성화
+    cache-enabled: false
+    # SQL 세션 객체마다 가지고 있는 로컬 캐시의 적용 범위를 STATEMENT로 설정
+    local-cache-scope: STATEMENT
+    # 지연 로딩 비활성화
+    lazy-loading-enabled: false
+    # 스네이크 케이스 → 카멜 케이스 변환
+    map-underscore-to-camel-case: true
+    # 조회되는 값이 널 값일 경우, 누락되는 문제를 방지하기 위해 setter() 또는 Map의 put() 호출
+    call-setters-on-nulls: true
+    # 마이바티스에서 값이 널 값인 파라미터 처리
+    jdbc-type-for-null: NULL
+  # 매핑을 위한 클래스의 이름을 작성시, 해당 클래스가 속한 패키지 명 생략
+  type-aliases-package: com.bins.gopl.domain.**.dto
+  # 마이바티스의 사용자 정의 타입 핸들러가 위치한 패키지를 지정하여, 값의 변환 수행시 해당 타입 핸들러가 적용되도록 설정
+  type-handlers-package: com.bins.gopl.global.common.mybatis
+  # 매퍼 XML 파일의 경로 설정
+  mapper-locations:
+    - classpath:mappers/**/*_mapper.xml
+    - classpath:mappers/*_mapper.xml
+
+# 로깅 레벨 설정
+logging:
+  level:
+    web: info
+    root: info
+
+# 서버 설정
+server:
+  port: 80
+  servlet:
+    # HTTP 요청 및 응답의 인코딩 설정
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true

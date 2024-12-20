@@ -1,11 +1,84 @@
 <!DOCTYPE html>
 <html lang="ko" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-</head>
+<head th:replace= "~{common/layout/fragments/head :: head}"></head>
+<link rel="stylesheet" href="/css/gopl/user/signup.css">
 <body>
-
+    <div id="page_container" class="column">
+        <div id="container" class="column is-midst">
+            <main class="contents">
+                <div class="content-heading">
+                    <h1 class="content-heading-title">회원가입</h1>
+                    <p class="content-heading-subtitle"><i class="symbol-required">*</i>는 필수 입력 항목입니다.</p>
+                </div>
+                <form role="form" id="add_form" class="content-form">
+                    <div class="field is-grouped">
+                        <div class="field">
+                            <label for="user_name" class="label">이름 <i class="symbol-required">*</i></label>
+                            <span class="box-padding-rounded text-input">
+                                <input type="text" name="name" id="user_name" class="box input" autofocus>
+                                <i class="icon"></i>
+                            </span>
+                            <small class="feeback"></small>
+                        </div>
+                        <div class="field">
+                            <label for="user_id" class="label">아이디 <i class="symbol-required">*</i></label>
+                            <p class="text-help">아이디 : 4~20자의 영문 + 숫자 조합</p>
+                            <div class="has-addons">
+                                <span class="box-padding-rounded text-input">
+                                    <input type="text" name="id" id="user_id" class="box input">
+                                    <i class="icon"></i>
+                                </span>
+                                <span class="box-padding-rounded btn is-primary">
+                                    <button type="button" id="btn_exists_id" class="box button">중복 확인</button>
+                                </span>
+                            </div>
+                            <small class="feeback"></small>
+                        </div>
+                        <div class="field">
+                            <label for="user_email" class="label">이메일 <i class="symbol-required">*</i></label>
+                            <div class="has-addons">
+                                <span class="box-padding-rounded text-input">
+                                    <input type="text" name="email" id="user_email" class="box input">
+                                    <i class="icon"></i>
+                                </span>
+                                <span class="box-padding-rounded btn is-primary">
+                                    <button type="button" id="btn_exists_email" class="box button">중복 확인</button>
+                                </span>
+                            </div>
+                            <small class="feeback"></small>
+                        </div>
+                        <div class="field">
+                            <label for="user_pwd" class="label">비밀번호 <i class="symbol-required">*</i></label>
+                            <p class="text-help">비밀번호 : 8~16자의 영문 + 숫자 + 특수문자 조합</p>
+                            <span class="box-padding-rounded text-input">
+                                <input type="password" name="password" id="user_pwd" class="box input" autocomplete="off">
+                                <i class="icon"></i>
+                            </span>
+                            <small class="feeback"></small>
+                        </div>
+                        <div class="field">
+                            <label for="confirm_pwd" class="label">비밀번호 확인 <i class="symbol-required">*</i></label>
+                            <span class="box-padding-rounded text-input">
+                                <input type="password" name="password" id="confirm_pwd" class="box input" autocomplete="off">
+                                <i class="icon"></i>
+                            </span>
+                            <small class="feeback"></small>
+                        </div>
+                    </div>
+                    <div class="field is-grouped">
+                        <div class="field">
+                            <span class="box-padding-rounded btn is-primary">
+                                <button type="button" id="btn_add" class="button">가입하기</button>
+                            </span>
+                        </div>
+                        <div class="field link is-text-center">
+                            이미 계정이 있으시다면? <a role="link" href="/" class="is-text-link">로그인</a>
+                        </div>
+                    </div>
+                </form>
+            </main>
+        </div>
+    </div>
+    <th:block th:replace= "~{common/layout/fragments/script :: script}"/>
 </body>
 </html>

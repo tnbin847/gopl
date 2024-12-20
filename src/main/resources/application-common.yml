@@ -1,0 +1,31 @@
+#
+# 스프링부트 애플리케이션 공통 환경 설정
+#
+
+# 스프링 설정
+spring:
+  config:
+    activate:
+      on-profile:
+        - common
+  # 애플리케이션 이름 설정
+  application:
+    name: going-project-v.1.0
+  main:
+    # 스프링부트 애플리케이션 구동시 출력되는 시작 배너 끄기
+    banner-mode: OFF
+  # 웹 브라우저의 새로고침을 통해 변경된 화면단 적용을 위해 템플릿 경로와 캐시값 설정
+  thymeleaf:
+    prefix: file:src/main/resources/templates/
+    suffix: .html
+    mode: HTML
+    encoding: UTF-8
+    cache: false  # 개발 완료시 `true`로 변경
+  # 웹 브라우저의 새로고침을 통해 변경된 화면단 적용을 위해 리소스 경로 변경
+  web:
+    resources:
+      static-locations:
+        - file:src/main/resources/static/
+      # 웹 브라우저의 캐시 시간 지정
+      cache:
+        period: 36000

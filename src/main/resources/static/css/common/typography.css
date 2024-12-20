@@ -1,0 +1,145 @@
+@charset "utf-8";
+
+/**
+ * 텍스트 및 문단에 대한 스타일 정의
+ */
+
+
+
+/*===========================================================================================
+    || 글꼴
+===========================================================================================*/
+/* 타이틀 글꼴 -----------------------------------------------------*/
+@font-face {
+    font-family: 'FugazOne';
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/FugazOne.woff2') format('woff2'),
+         url('/fonts/FugazOne.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Montserrat-Black';
+    font-weight: 900;
+    font-display: swap;
+    src: url('/fonts/Montserrat-Black.woff2') format('woff2'),
+         url('/fonts/Montserrat-Black.woff') format('woff');
+}
+
+
+/* 본문 글꼴 -----------------------------------------------------*/
+@font-face {
+    font-family: 'Pretendard-Regular';
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/Pretendard-Regular.woff2') format('woff2'),
+         url('/fonts/Pretendard-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard-Medium';
+    font-weight: 500;
+    font-display: swap;
+    src: url('/fonts/Pretendard-Medium.woff2') format('woff2'),
+         url('/fonts/Pretendard-Medium.woff') format('woff');
+}
+
+
+
+/*===========================================================================================
+    || 공통
+===========================================================================================*/
+* {
+    color: var(--text-color);
+    font-family: 'Pretendard-Regular', sans-serif;
+    font-weight: 600;
+    font-size: var(--font-default-size);
+    --webkit-font-smoothing: antialiased;
+    --moz-osx-font-smoothing: grayscale;
+}
+
+
+
+/*===========================================================================================
+    || 정렬
+===========================================================================================*/
+.is-text-left {
+    text-align: left;
+}
+
+.is-text-center {
+    text-align: center;
+}
+
+.is-text-right {
+    text-align: right;
+}
+
+
+
+/*===========================================================================================
+    || 색상
+===========================================================================================*/
+.is-text-primary {
+    color: var(--primary-color);
+}
+
+.is-text-secondary {
+    color: var(--secondary-color);
+}
+
+.is-text-link {
+    color: var(--link-color);
+}
+
+.is-text-success {
+    color: var(--success-color);
+}
+
+.is-text-danger {
+    color: var(--danger-color);
+}
+
+
+
+/*===========================================================================================
+    || 링크
+===========================================================================================*/
+.link {
+    color: var(--light-color);
+    font-family: 'Pretendard-Medium', sans-serif;
+}
+
+
+/* 링크 그룹 -----------------------------------------------------*/
+.link.is-grouped > a[role='link'] {
+    margin: 0 var(--spacing-sm);
+}
+
+.link.is-grouped > a[role='link']:first-child {
+    margin-left: 0;
+}
+
+.link.is-grouped > a[role='link']:last-child {
+    margin-right: 0;
+}
+
+
+
+/*===========================================================================================
+    || 로고 텍스트
+===========================================================================================*/
+.text-logo-xl {
+    font-family: 'FugazOne', sans-serif;
+    font-size: var(--font-xxl);
+}
+
+.text-logo-lg {
+    font-family: 'FugazOne', sans-serif;
+    font-size: var(--font-xl);
+}
+
+.text-logo-md {
+    font-family: 'FugazOne', sans-serif;
+    font-size: var(--font-lg);
+}

@@ -1,0 +1,168 @@
+@charset "utf-8";
+
+/**
+ * 웹 페이지 구성시 사용되는 버튼, 패널, 네비게이션 메뉴 등의 컴포넌트와 폼 관련 레이아웃 및 내부 폼 요소 등에 대한 스타일 정의
+ */
+
+
+
+/*===========================================================================================
+    || 패널
+===========================================================================================*/
+.panel {
+    width: 100%;
+    padding: var(--panel-padding-xl);
+    border: 1px solid var(--border-color);
+    border-radius: var(--rounded-corner);
+    background-color: var(--white-color);
+}
+
+
+
+/*===========================================================================================
+    || 버튼
+===========================================================================================*/
+.btn {
+    border-radius: var(--rounded-corner);
+    border: 1px solid var(--border-color);
+}
+
+.btn > .button {
+    width: 100%;
+    height: var(--contains-intrinsic-height);
+    line-height: var(--contains-intrinsic-height);
+    color: inherit;
+    font-family: 'Pretendard-Medium', sans-serif;
+}
+
+
+/* 색상별 버튼 스타일 -----------------------------------------------------*/
+.btn.is-primary {
+    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.btn.is-secondary {
+    border-color: var(--secondary-color);
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+
+
+
+/*===========================================================================================
+    || 폼
+===========================================================================================*/
+.content-form {
+    line-height: 1;
+}
+
+
+/* 폼 필드 레이아웃 -----------------------------------------------------*/
+.field {
+    margin-bottom: var(--spacing-md);
+}
+
+.field:last-child {
+    margin-bottom: 0;
+}
+
+
+/* 내부 요소 그룹핑 레이아웃 -----------------------------------------------------*/
+.has-addons {
+    width: 100%;
+}
+
+.has-addons > * {
+    display: inline-block;
+}
+
+
+/* 폼 필드 그룹 레이아웃 -----------------------------------------------------*/
+.field.is-grouped {
+    margin: var(--spacing-lg) 0;
+}
+
+.field.is-grouped:first-child {
+    margin-top: 0;
+}
+
+
+/* 폼 내부 요소 -----------------------------------------------------*/
+/* 라벨 */
+.label {
+    display: inline-block;
+    box-sizing: border-box;
+    margin-bottom: var(--spacing-xxs);
+    color: var(--secondary-color);
+    font-family: 'Pretendard-Medium', sans-serif;
+}
+
+
+/* 필수 항목 심볼 */
+.symbol-required {
+    color: var(--danger-color);
+    font-size: var(--font-sm);
+}
+
+
+/* 입력 도움글 */
+.text-help {
+    margin-bottom: var(--spacing-xxs);
+    color: var(--light-color);
+    font-size: var(--font-sm);
+}
+
+
+/* 입력 필드 */
+.text-input {
+    width: 100%;
+    border: 1px solid var(--border-color);
+    background-color: var(--white-color);
+}
+
+.text-input > .input {
+    width: 95%;
+    height: var(--contains-intrinsic-height);
+    color: var(--text-color);
+}
+
+.text-input > .input:focus-within {
+    border-color: var(--primary-color);
+}
+
+
+
+/*===========================================================================================
+    || 폼 유효성
+===========================================================================================*/
+/* 공통 -----------------------------------------------------*/
+.text-input > .icon, .feedback {
+    display: none;
+    font-size: var(--font-sm);
+}
+
+
+/* 폼 유효성 메세지 -----------------------------------------------------*/
+.feedback {
+    margin-top: var(--spacing-default);
+}
+
+.icon-ok, .success {
+    display: block;
+    color: var(--success-color);
+}
+
+.icon-cancel, .error {
+    display: block;
+    color: var(--danger-color);
+}
+
+
+/* 폼 유효성 아이콘 -----------------------------------------------------*/
+.text-input > .icon {
+    position: absolute;
+    top: var(--input-icon-position-top);
+    right: var(--input-icon-position-right);
+}

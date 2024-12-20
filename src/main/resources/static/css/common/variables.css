@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+/**
+ * CSS 사용자 정의 변수 정의
+ */
+
+
+
+:root {
+    /* 색상 -------------------------------------------*/
+    --primary-color: #3758F9;
+    --secondary-color: #474656;
+    --success-color: #18B57A;
+    --warning-color: #FCBF66;
+    --danger-color: #E15F68;
+    --link-color: #4798F7;
+    --border-color: #D6D9E0;
+    --light-color: #69748C;
+    --dark-color: #272C39;
+    --text-color: #2E333D;
+    --disabled-color: #ECECEC;
+
+    --white-color: #FFFFFF;
+    --gray-color: #ABB1BF;
+    --black-color: #14161A;
+
+    --background-gray-lighter: #F3F4F6;
+
+
+    /* 텍스트 -------------------------------------------*/
+    --font-default-size: 13px;
+
+    --font-sm: 12px;
+    --font-md: 16px;
+    --font-lg: 20px;
+
+    --font-xl: 24px;
+    --font-xxl: 28px;
+
+
+    /* 아이콘 -------------------------------------------*/
+    --icon-default-size: 12px;
+
+    --icon-sm: 10px;
+    --icon-md: 14px;
+    --icon-lg: 18px;
+
+    --icon-xl: 22px;
+    --icon-xxl: 26px;
+
+    --input-icon-position-top: 16px;
+    --input-icon-position-right: 12px;
+
+    --x-axis-button-icon: 16px;
+    --y-axis-button-icon: 6px;
+
+
+    /* 간격 -------------------------------------------*/
+    --spacing-default: 4px;
+
+    --spacing-xxxs: 2px;
+    --spacing-xxs: 6px;
+    --spacing-xs: 10px;
+
+    --spacing-sm: 14px;
+    --spacing-md: 18px;
+    --spacing-lg: 22px;
+
+    --spacing-xl: 26px;
+    --spacing-xxl: 30px;
+    --spacing-xxxl: 34px;
+
+
+    /* 패널 패딩 사이즈 -------------------------------------------*/
+    --panel-padding-md: 30px;
+    --panel-padding-lg: 34px;
+
+    --panel-padding-xl: 38px;
+    --panel-padding-xxl: 42px;
+
+
+    /* 기타 -------------------------------------------*/
+    --rounded-corner: 2.8px;
+    --contains-intrinsic-height: 22px;
+}

@@ -1,21 +1,8 @@
-server:
-  port: 80
-  servlet:
-    encoding:
-      force: true
-
+#
+# 스프링부트 애플리케이션 환경별 프로파일 그룹화
+#
 spring:
-  application:
-    name: going-project-v.1.0.
-  main:
-    banner-mode: off
-  thymeleaf:
-    prefix: file:src/main/resources/templates/
-    suffix: .html
-    cache: false
-  web:
-    resources:
-      static-locations:
-        - file:src/main/resources/static/
-      cache:
-        period: 36000
+  profiles:
+    active: dev
+    group:
+      dev: common, dev

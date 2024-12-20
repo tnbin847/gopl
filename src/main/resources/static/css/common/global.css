@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+/**
+ * 웹 사이트의 레이아웃과 컴포넌트 등에 사용될 스타일 정의
+ */
+
+
+
+/*===========================================================================================
+    || 박스
+===========================================================================================*/
+.box {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.box-padding-rounded {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    padding: var(--spacing-xs);
+    border-radius: var(--rounded-corner);
+}
+
+
+
+/*===========================================================================================
+    || 플렉스 정렬
+===========================================================================================*/
+/* 수직 정렬 -----------------------------------------------------*/
+.column {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.column.is-top {
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.column.is-center {
+    align-items: center;
+}
+
+.column.is-bottom {
+    align-items: flex-end;
+    justify-items: center;
+}
+
+
+/* 수평 정렬 -----------------------------------------------------*/
+.row {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.row.is-left {
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.row.is-center {
+    justify-content: center;
+}
+
+.row.is-right {
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.row.is-space-between {
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* 수직/수평 정중앙 정렬 -----------------------------------------------------*/
+.column.is-midst, .row.is-midst {
+    align-items: center;
+    justify-content: center;
+}

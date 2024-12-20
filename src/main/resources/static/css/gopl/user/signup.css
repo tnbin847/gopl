@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+/**
+ * 회원가입 페이지 스타일
+ */
+
+
+
+.contents:has(#add_form) {
+    width: 420px;
+}
+
+
+.has-addons > .text-input {
+    width: 79%;
+    margin-right: var(--spacing-xxxs);
+}
